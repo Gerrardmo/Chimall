@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	accountservice "server/service/account/account"
+	accountService "server/service/account/account"
 	serviceOrder "server/service/account/order"
 	"server/service/server"
 )
@@ -20,7 +20,7 @@ func main() {
 
 	order.POST("List", serviceOrder.List)
 
-	account.POST("/profile", accountservice.Profile)
+	account.POST("/profile", accountService.Profile)
 
 	g.Run(":9999")
 }

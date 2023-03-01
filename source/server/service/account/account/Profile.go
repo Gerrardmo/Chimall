@@ -1,4 +1,4 @@
-package accountservice
+package accountService
 
 import "github.com/gin-gonic/gin"
 
