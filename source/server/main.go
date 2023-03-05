@@ -9,7 +9,7 @@ import (
 
 func main() {
 	g := gin.New()
-
+	//
 	g.POST("/login", server.Login)
 	g.POST("/register", server.Register)
 	g.POST("/logout", server.Logout)
