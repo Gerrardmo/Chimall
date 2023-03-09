@@ -16,6 +16,6 @@ type LoginReponse struct {
  */
 
 func Login(c *gin.Context) {
-	c.String(http.StatusOK, "登录接口 ?")
+	c.String(http.StatusOK, "登录接口    ?")
 
 }
