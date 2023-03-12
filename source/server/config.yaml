@@ -1,0 +1,6 @@
+server:
+  host: 127.0.0.1:9999
+jwt:
+  key: "jwt-chihuo-key"
+mysql:
+  dsn: "root:mcw123456.@tcp(47.115.134.176:3306)/chimall?charset=utf8mb4&parseTime=True&loc=Local"

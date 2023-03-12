@@ -26,6 +26,7 @@ func List(c *gin.Context) {
 	//TODO
 
 	fmt.Println(req)
+	fmt.Println(c.Get("token"))
 
 	resp := ListReponse{}
 	for i := 0; i < 4; i++ {

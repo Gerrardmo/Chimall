@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-const dsn = "chimall:password@tcp(localhost:3306)/chimall?charset=utf8mb4&parseTime=True&loc=Local"
+const dsn = "root:mcw123456.@tcp(47.115.134.176:3306)/chimall?charset=utf8mb4&parseTime=True&loc=Local"
 
 func main() {
 	db, err := gorm.Open(mysql.Open(dsn))
@@ -17,10 +17,10 @@ func main() {
 	// 生成实例
 	g := gen.NewGenerator(gen.Config{
 		OutPath:      "../../source/server/logic/orm/dal",
-		ModelPkgPath: "../../source/server/logic/orm/model",
+		ModelPkgPath: "model",
 		Mode:         gen.WithDefaultQuery | gen.WithoutContext,
 	})
-	// 设置目标 db
+
 	g.UseDB(db)
 	g.ApplyBasic(g.GenerateAllTable()...)
 	g.Execute()
